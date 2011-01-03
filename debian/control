@@ -1,0 +1,52 @@
+Source: libtiff
+Section: core
+Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
+Build-Depends: debhelper (>= 7), automake, libtool
+XCS-Cross-Host-Build-Depends: debhelper (>= 7), automake, libtool
+Priority: optional
+Standards-Version: 3.8.0
+
+Package: libtiff4
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Tag Image File Format (TIFF) library
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library.
+
+Package: libtiffxx4
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Tag Image File Format (TIFF) library -- C++ support
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library.
+ .
+ This package includes C++ interface.
+
+Package: libtiff-dev
+Section: libdevel
+Priority: optional
+Architecture: any
+Depends: libtiff4 (= ${binary:Version})
+Description: Tag Image File Format (TIFF) library -- development files
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library.
+ .
+ This package contains development files required to link with the library.
+
+Package: libtiff-tools
+Section: core
+Priority: optional
+Architecture: any
+Depends: ${shlib:Depends}, ${misc:Depends}
+Description: Tag Image File Format (TIFF) library -- tools
+ libtiff is a library providing support for the Tag Image File Format
+ (TIFF), a widely used format for storing image data.  This package
+ includes the shared library.
+ .
+ This package contains command-line tools.
+
